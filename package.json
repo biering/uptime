@@ -1,0 +1,27 @@
+{
+  "name": "up",
+  "version": "1.0.0",
+  "description": "super simple pomodoro timer",
+  "author": "Christoph Biering <chryb.q@gmail.com> (http://chryb.me)",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "nuxt": "^1.0.0",
+    "vue-input-autowidth": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}

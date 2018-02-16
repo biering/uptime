@@ -1,0 +1,1 @@
+export { publicMinerKey } from './miner'
