@@ -1,6 +1,6 @@
-# uptime
+# Uptime
 
-> super simple pomodoro timer
+> Super simple pomodoro timer
 
 ## Build Setup
 
@@ -17,6 +17,16 @@ $ npm start
 
 # generate static project
 $ npm run generate
+
+# deploy on gh-pages
+# 1. commit local changes
+
+$ yarn run generate:gh-pages
+$ yarn run deploy
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+
+## License
+
+See `./LICENSE`
