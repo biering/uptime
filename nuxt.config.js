@@ -1,3 +1,9 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/uptime/'
+  }
+} : {}
+
 module.exports = {
   /*
   ** Headers of the page
@@ -40,5 +46,7 @@ module.exports = {
 
   plugins: [
     '~/plugins/vue-input-autowidth'
-  ]
+  ],
+
+  ...routerBase
 }
