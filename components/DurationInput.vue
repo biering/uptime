@@ -2,6 +2,8 @@
   <input
     type="number"
     :placeholder="placeholder"
+    @input="onInput"
+    @keydown="onKeyDown"
     v-model.number="val"
     v-autowidth="{ maxWidth: '130px', minWidth: '20px', comfortZone: 0 }"
   />
@@ -25,6 +27,23 @@ export default {
   data () {
     return {
       val: this.value
+    }
+  },
+
+  methods: {
+    onInput () {
+      if (this.val > 1440)
+        this.val = 1440
+      if (this.val < 0)
+        this.val = 0
+    },
+
+    onKeyDown ({ keyCode }) {
+      if (keyCode === 69 || keyCode === 190 || keyCode === 189) {
+        event.preventDefault()
+        return false
+      }
+      return true
     }
   }
 }

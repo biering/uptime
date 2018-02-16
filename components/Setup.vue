@@ -5,14 +5,14 @@
       <DurationInput
         placeholder="10"
         v-model.number="itv1"
-        @input="$store.commit('setDuration', { itv1: $event})" /> min
+        @input="$store.commit('setDuration', { itv1: $event })" /> min
     </p>
     <p>
     to take a break for
     <DurationInput
       placeholder="5"
       v-model.number="itv2"
-      @input="$store.commit('setDuration', { itv2: $event})"/> min.
+      @input="$store.commit('setDuration', { itv2: $event })"/> min.
     </p>
 
     <div style="text-align: center;">
