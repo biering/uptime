@@ -39,9 +39,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    },
-
-    vendor: ['vue-input-autowidth']
+    }
   },
 
   plugins: [
