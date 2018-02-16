@@ -143,13 +143,13 @@ export default {
         const notification = new Notification(
           (working) ? 'Start working!' : 'Time for a break',
           {
-            icon: '',
+            icon: 'favicon.png',
             body: (working) ? "It's time to be productive." : 'Get up and catch your breath'
           }
         )
 
         notification.onclick = () => {
-        //window.open("http://stackoverflow.com/a/13328397/1269037");
+          //window.open("http://stackoverflow.com/a/13328397/1269037");
         }
       }
     }
