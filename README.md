@@ -1,4 +1,4 @@
-# up
+# uptime
 
 > super simple pomodoro timer
 
