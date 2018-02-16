@@ -5,6 +5,19 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'default',
+
+  head () {
+    const time = this.$store.state.time || 'Uptime'
+    return {
+      titleTemplate: `${time}`
+    }
+  }
+}
+</script>
+
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 

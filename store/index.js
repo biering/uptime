@@ -4,7 +4,8 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       itv1: 0,
-      itv2: 0
+      itv2: 0,
+      time: ''
     },
     mutations: {
       setDuration (state, { itv1, itv2 }) {
@@ -14,6 +15,10 @@ const createStore = () => {
         if (!!itv2) {
           state.itv2 = itv2
         }
+      },
+
+      setTime (state, time = '') {
+        state.time = time
       }
     }
   })

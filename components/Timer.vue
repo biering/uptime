@@ -29,6 +29,10 @@ export default {
     }
   },
 
+  beforeDestroy () {
+    this.$store.commit('setTime', '')
+  },
+
   mounted () {
     let { itv1, itv2 } = this.$store.state
 
@@ -56,11 +60,15 @@ export default {
 
         minutes = minutes < 10 ? `0${minutes}` : `${minutes}`
         seconds = seconds < 10 ? `0${seconds}` : `${seconds}`
+
+        this.$store.commit('setTime', `${minutes}:${seconds}`)
+
         minutes = minutes.split('0').join('O')
         seconds = seconds.split('0').join('O')
 
         this.time = `${minutes}:${seconds}`
         this.percent = percent
+
       })
 
     this.timer = timer
