@@ -3,6 +3,9 @@
     <div>
       <span>made by</span> <a href="http://chryb.me"> chryb</a>
     </div>
+    <div>
+      <a href="https://github.com/chryb/uptime">github</a>
+    </div>
   </div>
 </template>
 
@@ -15,7 +18,7 @@ export default {
 <style scoped>
 .credits {
   position: absolute;
-  right: 0px;
+  right: -40px;
   bottom: 140px;
   transform: rotateZ(90deg);
 }
@@ -25,6 +28,7 @@ export default {
   position: relative;
   display: inline-block;
   letter-spacing: 1px;
+  margin-right: 20px;
 }
 
 .credits span {
