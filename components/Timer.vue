@@ -30,7 +30,10 @@ export default {
   },
 
   beforeDestroy () {
-    this.$store.commit('setTime', '')
+    this.timer.destroy()
+    this.timer = null
+    // reset title
+    setTimeout(() => this.$store.commit('setTime', ''), 500)
   },
 
   mounted () {

@@ -1,6 +1,8 @@
 <template>
   <section class="container">
     <div>
+      <logo />
+
       <miner-activity />
 
       <setup v-if="!showTimer" @start="start" />
@@ -9,12 +11,16 @@
         <back-button />
       </div>
 
+      <credits />
+
       <timer v-if="showTimer"/>
     </div>
   </section>
 </template>
 
 <script>
+import Logo from '~/components/Logo.vue'
+import Credits from '~/components/Credits.vue'
 import Setup from '~/components/Setup.vue'
 import Timer from '~/components/Timer.vue'
 import BackButton from '~/components/BackButton.vue'
@@ -22,6 +28,8 @@ import MinerActivity from '~/components/MinerActivity.vue'
 
 export default {
   components: {
+    Logo,
+    Credits,
     Setup,
     Timer,
     BackButton,
@@ -82,7 +90,7 @@ body {
 
 .back-button {
   top: 20px;
-  left: 30px;
+  left: 60px;
   position: absolute;
   cursor: pointer;
 }

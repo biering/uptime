@@ -6,6 +6,7 @@ export default class Countdown {
     this.completion = completion
     this.running = false
     this.ticks = []
+    this.killed = false
   }
 
   static parse (seconds) {
@@ -29,7 +30,8 @@ export default class Countdown {
       diff = self.duration - (((Date.now() - start) / 1000) | 0)
 
       if (diff > 0) {
-        setTimeout(timer, self.granularity)
+        if (!self.killed)
+          setTimeout(timer, self.granularity)
       } else {
         diff = 0
         self.running = false
@@ -43,8 +45,8 @@ export default class Countdown {
     }())
   }
 
-  stop () {
-
+  kill () {
+    this.killed = true
   }
 
   onTick (callback) {

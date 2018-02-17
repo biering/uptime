@@ -49,6 +49,11 @@ class IntervalTimer {
     this.timer.stop()
   }
 
+  destroy () {
+    if (!this.timer) return
+    this.timer.kill()
+  }
+
   reset () {
     this.setState(0)
   }
