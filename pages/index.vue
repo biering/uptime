@@ -70,6 +70,7 @@ body {
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
+  overflow: hidden;
 }
 </style>
 
