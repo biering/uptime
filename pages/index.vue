@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <div>
+    <div style="z-index: 10">
       <logo />
 
       <miner-activity />
@@ -25,6 +25,7 @@ import Setup from '~/components/Setup.vue'
 import Timer from '~/components/Timer.vue'
 import BackButton from '~/components/BackButton.vue'
 import MinerActivity from '~/components/MinerActivity.vue'
+import Blobs from '~/components/Blobs.vue'
 
 export default {
   components: {
@@ -33,7 +34,8 @@ export default {
     Setup,
     Timer,
     BackButton,
-    MinerActivity
+    MinerActivity,
+    Blobs
   },
 
   data () {

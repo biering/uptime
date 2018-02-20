@@ -8,6 +8,8 @@
         <span class="letters letters-3">Go</span>
         <span class="letters letters-final">{{ time }}</span>
       </h1>
+
+      <div class="percent-bar" :style="{ width: percent + '%' }" :class="{ 'right': state !== 'itv1' }"></div>
     </div>
 
   </div>
@@ -26,6 +28,18 @@ export default {
       time: '00:00',
       state: 'itv1',
       percent: 0
+    }
+  },
+
+  watch: {
+    percent (p) {
+      console.log(p)
+      /*anime({
+        targets: '.percent-bar',
+        width: p + '%',
+        easing: 'linear',
+        elasticity: 0
+      })*/
     }
   },
 
@@ -71,7 +85,6 @@ export default {
 
         this.time = `${minutes}:${seconds}`
         this.percent = percent
-
       })
 
     this.timer = timer
@@ -204,5 +217,17 @@ export default {
 
 .ml4 .letters-final {
   color: #fff;
+}
+
+.percent-bar {
+  position: absolute;
+  max-width: 100%;
+  height: 4px;
+  background-color: #1d1d1d;
+  bottom: 0;
+}
+
+.percent-bar.right {
+  right: 0;
 }
 </style>
